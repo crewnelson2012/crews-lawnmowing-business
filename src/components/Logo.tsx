@@ -4,7 +4,7 @@ export default function Logo({ size = 20, className }: Props) {
     <svg
       width={size}
       height={size}
-      viewBox="0 0 64 64"
+      viewBox="0 0 128 128"
       xmlns="http://www.w3.org/2000/svg"
       className={className}
       aria-hidden="true"
@@ -16,35 +16,40 @@ export default function Logo({ size = 20, className }: Props) {
           <stop offset="1" stopColor="#138353" />
         </linearGradient>
         <clipPath id="clipCircle">
-          <circle cx="32" cy="32" r="30" />
+          <circle cx="64" cy="64" r="60" />
         </clipPath>
       </defs>
-      <circle cx="32" cy="32" r="30" fill="url(#ccg)" />
+      <circle cx="64" cy="64" r="60" fill="url(#ccg)" />
       <g clipPath="url(#clipCircle)">
-        <path d="M -4 38 L 68 38 L 68 68 L -4 68 Z" fill="#16a34a" />
-        <path d="M -4 44 Q 32 54 68 44 L 68 58 L -4 58 Z" fill="#22c55e" />
-        <path d="M10 58 L12 44 L14 58 Z" fill="#15803d" />
-        <path d="M14 58 L16 46 L18 58 Z" fill="#16a34a" />
-        <path d="M18 58 L20 45 L22 58 Z" fill="#22c55e" />
-        <path d="M22 58 L24 36 L26 58 Z" fill="#15803d" />
-        <path d="M26 58 L28 32 L30 58 Z" fill="#16a34a" />
-        <path d="M30 58 L32 30 L34 58 Z" fill="#22c55e" />
-        <path d="M34 58 L36 32 L38 58 Z" fill="#15803d" />
-        <path d="M38 58 L40 36 L42 58 Z" fill="#16a34a" />
-        <path d="M42 58 L44 44 L46 58 Z" fill="#22c55e" />
-        <path d="M46 58 L48 46 L50 58 Z" fill="#15803d" />
-        <path d="M50 58 L52 45 L54 58 Z" fill="#16a34a" />
-        <path d="M54 58 L56 47 L58 58 Z" fill="#22c55e" />
-        {/** simple mower silhouette */}
-        <g opacity="0.95">
-          <line x1="46" y1="44" x2="58" y2="34" stroke="#ffffff" strokeWidth="2.2" strokeLinecap="round" />
-          <rect x="40" y="47" width="20" height="7" rx="2.5" fill="#ffffff" />
-          <circle cx="46" cy="56" r="2.8" fill="#0f5137" />
-          <circle cx="56" cy="56" r="2.8" fill="#0f5137" />
+        <rect x="-8" y="76" width="144" height="64" fill="#198f51" />
+        <path d="M -8 108 L 84 78 L 144 78 L 144 140 L -8 140 Z" fill="#2acb73" />
+        <g fill="#0f7a43">
+          <path d="M84 116 L88 88 L92 116 Z" />
+          <path d="M92 116 L96 86 L100 116 Z" />
+          <path d="M100 116 L104 88 L108 116 Z" />
+          <path d="M108 116 L112 90 L116 116 Z" />
+          <path d="M116 116 L120 92 L124 116 Z" />
         </g>
-      </g>
-      <g>
-        <text x="32" y="37" textAnchor="middle" fontSize="26" fontFamily="system-ui,Segoe UI,Arial" fill="#ffffff" stroke="#0f5137" strokeWidth="1.2" fontWeight={800}>CC</text>
+        <g fill="#25a45f">
+          <rect x="8" y="104" width="3" height="12" />
+          <rect x="16" y="102" width="3" height="14" />
+          <rect x="24" y="100" width="3" height="16" />
+          <rect x="32" y="98" width="3" height="18" />
+          <rect x="40" y="96" width="3" height="20" />
+          <rect x="48" y="94" width="3" height="22" />
+          <rect x="56" y="92" width="3" height="24" />
+          <rect x="64" y="90" width="3" height="26" />
+          <rect x="72" y="88" width="3" height="28" />
+        </g>
+        {/** simple mower silhouette */}
+        <g opacity="0.22">
+          <line x1="86" y1="72" x2="118" y2="52" stroke="#0f0f0f" strokeWidth="4" strokeLinecap="round" />
+          <rect x="70" y="76" width="24" height="10" rx="3" fill="#0f0f0f" />
+          <rect x="72" y="80" width="36" height="12" rx="4" fill="#0f0f0f" />
+          <circle cx="84" cy="98" r="6" fill="#0f0f0f" />
+          <circle cx="104" cy="98" r="6" fill="#0f0f0f" />
+        </g>
+        <text x="90" y="88" textAnchor="middle" fontSize="14" fontFamily="system-ui,Segoe UI,Arial" fill="#ffffff" stroke="#0f5137" strokeWidth="1" fontWeight={800}>CC</text>
       </g>
     </svg>
   )
