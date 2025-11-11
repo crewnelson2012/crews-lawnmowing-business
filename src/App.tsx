@@ -1,4 +1,5 @@
 import type { ReactNode } from 'react'
+import { useEffect } from 'react'
 import { Link, NavLink, Route, Routes, useLocation } from 'react-router-dom'
 import { BarChart3, CalendarCheck2, CalendarDays, Home, Settings, Users, DollarSign } from 'lucide-react'
 import Dashboard from './pages/Dashboard'
@@ -9,6 +10,7 @@ import SettingsPage from './pages/Settings'
 import CalendarPage from './pages/Calendar'
 import TithingPage from './pages/Tithing'
 import Logo from './components/Logo'
+import { useStore } from './store/store'
 
 function NavItem({ to, icon, label }: { to: string; icon: ReactNode; label: string }) {
   return (
@@ -23,6 +25,10 @@ function NavItem({ to, icon, label }: { to: string; icon: ReactNode; label: stri
 
 export default function App() {
   const location = useLocation()
+  const syncFromSupabase = useStore((s) => s.syncFromSupabase)
+  useEffect(() => {
+    syncFromSupabase().catch(() => {})
+  }, [syncFromSupabase])
   return (
     <div className="min-h-screen">
       <header className="border-b bg-white">
