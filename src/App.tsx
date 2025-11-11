@@ -34,7 +34,7 @@ export default function App() {
       <header className="border-b bg-white">
         <div className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
           <Link to="/" className="flex items-center gap-2 font-semibold text-lg">
-            <Logo size={40} />
+            <Logo size={28} />
             Crew's Cuts
           </Link>
           <nav className="flex items-center gap-1">
